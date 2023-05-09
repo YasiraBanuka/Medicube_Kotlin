@@ -24,10 +24,17 @@ class SignInActivity : AppCompatActivity() {
         binding.textView.setOnClickListener {
 //            val intent = Intent(this, SignUpActivity::class.java)
             //edit here
-            val intent = Intent(this, FeedAvailable::class.java)
+            val intent = Intent(this, SummaryAvailable::class.java)
 
             startActivity(intent)
         }
+
+//        binding.textView.setOnClickListener {
+//            val intent = Intent(this, SummaryAvailable::class.java)
+//            intent.putExtra("userId", firebaseAuth.currentUser?.uid)
+//            startActivity(intent)
+//        }
+
 
         binding.button.setOnClickListener {
             val email = binding.emailEt.text.toString()
@@ -37,7 +44,7 @@ class SignInActivity : AppCompatActivity() {
 
                 firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val intent = Intent(this, Userprofile::class.java)
+                        val intent = Intent(this, AddAvailableMedicines::class.java)
                         startActivity(intent)
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
