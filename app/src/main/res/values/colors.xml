@@ -23,6 +23,9 @@
     <color name="feedMedicineWeight">#8F8D8D</color>
     <color name="feedUserDetails">#969696</color>
 
+<!--    loading layout color-->
+    <color name="progressLayout">#3944bc</color>
+
     <!--    need medicines-->
     <string name="medicine1">Amoxicillin.</string>
     <string name="medi">Amoxicillin.  500mg</string>
